@@ -1,0 +1,39 @@
+.section2
+  background: $light
+
+.section2-grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(350px , 1fr))
+  margin-bottom: -15vh
+  margin-top: 15vh
+
+.section-grid-item
+  position: relative
+  color: $white
+  img
+    width: 100%
+    height: 300px
+    object-fit: cover
+
+  .overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    padding: 1.5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    background: $gradient
+    opacity: 0
+    transition: all 0.5s
+    p
+      font-size: 1.3rem
+    h4
+      font-size: 2rem
+      text-transform: capitalize
+    i
+      font-size: 2rem
+    &:hover
+      opacity: 1

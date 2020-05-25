@@ -1,0 +1,28 @@
+
+.section3
+  .left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: center
+
+  .top
+    .right
+      order: -1
+
+  img
+    width: 100%
+    height: auto
+
+.section3-top
+  background: $light
+
+@media (min-width: 992px)
+  .section3
+    .left
+      text-align: left
+    .h2
+      text-align: left
+    .top
+      .right
+        order: 1

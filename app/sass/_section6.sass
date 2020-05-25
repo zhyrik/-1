@@ -1,0 +1,88 @@
+
+.section6
+  padding: 0
+
+  .grid-wrap
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+  .grid-item
+    cursor: pointer
+    margin: 0
+    &:hover
+      .grid-item-img
+        &::after
+          opacity: 0.6
+      img
+        transform: scale(1.1)
+
+  .grid-full
+    grid-area: 1 / 1 / 2 / 3
+
+  .grid-item-img
+    overflow: hidden
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    min-height: 25rem
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: $gradient
+      opacity: 0.1
+      transition: all 0.3s
+
+    img
+      width: 100%
+      height: auto
+
+      transition: all 0.3s
+      position: relative
+
+  .grid-item-text
+    text-align: center
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    .h5
+      font-size: 2.4rem
+      font-weight: 600
+    p
+      font-size: 1.5rem
+      color: $grey
+
+  .socials
+    font-size: 2rem
+    a
+      color: $grey
+      padding: 0.5rem
+      transition: transform 0.3s
+      &:hover
+        transform: scale(1.2)
+
+  .grid-item-reverse
+    flex-direction: row-reverse
+
+@media screen and ( max-width: 992px )
+  .section6
+    .grid-wrap
+      display: flex
+      flex-direction: column
+    .mobile-reverse
+      flex-direction: row-reverse
+    .mobile
+      flex-direction: row
+
+@media screen and ( max-width: 576px )
+  .section6
+    .grid-item
+      flex-direction: column
+  .grid-item-text
+    padding-top: 6rem
+    padding-bottom: 6rem
